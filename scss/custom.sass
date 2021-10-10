@@ -1,0 +1,137 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap"
+
+// Then add additional custom code here
+
+$font-color : #555555
+$crimsom    : #d52856
+
+body
+
+.btn-danger 
+    background-color : $crimsom
+    &:hover
+        background-color : #b52249
+
+.carousel
+    .carousel-inner
+        .carousel-item
+            height: 500px
+            .carousel-caption
+                padding-bottom: 2rem
+            #slide_1
+                text-align : left  
+            #slide_2
+                text-align : center 
+            #slide_3
+                text-align : right
+            img
+                filter: brightness(0.4)
+
+#services
+    color: $font-color
+    div
+        p
+            font-size: 0.7em
+            margin: auto 15%
+            text-align: center
+        a
+            font-size: 0.7em
+            text-decoration: none
+            color : $font-color
+            font-weight: bold
+            
+    .services__img
+        width: 140px
+        height: 140px
+        transition-property: width height
+        transition-duration: 1s
+        &:hover 
+            width : 200px
+            height : 200px
+            
+#quote_parallax_1
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/trilha.jpg")
+    min-height: 200px
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-size: 100%
+    blockquote
+        font-size: 1.25em
+
+#prices
+    #prices__title 
+        color : $font-color
+        font-size: 32px
+        font-weight: 100
+    #prices__cards
+        .card
+            width: 30%
+    div
+        p
+            font-size: 0.7em
+
+#contact
+    #contact__title 
+        color : $font-color
+        font-size: 32px
+        font-weight: 100
+    form
+        margin : 0% 10%
+        label
+            font-weight: 200
+
+#quote_parallax_2
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/treino-praia.jpg")
+    min-height: 200px
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-size: 100%
+    blockquote
+        font-size: 1.25em
+
+@media (max-width: 480px)
+    .carousel
+        .carousel-inner
+            .carousel-item
+                img
+                    width: 100%
+                    height: 100%
+
+    #services
+        flex-flow : column wrap!important
+        div
+            margin-bottom: 25px
+
+    #quote_parallax_1
+        background-size: 150% 150%
+        blockquote
+            p
+                font-size: 1.25em
+                margin: auto 30%
+
+    #prices
+        #prices__cards
+            flex-flow : column wrap!important
+            .card
+                width : 95%
+                margin: 2% auto
+
+    #quote_parallax_2
+        background-size: 150% 150%
+        blockquote
+            p
+                font-size: 1.25em
+                margin: auto 30%
+
+    #contact
+        #contact__title 
+            color : $font-color
+            font-size: 24px
+            font-weight: 100
+        form
+            margin : 0% 2%
